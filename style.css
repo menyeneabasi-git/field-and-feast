@@ -1,3 +1,54 @@
+/* Created by Menyeneabasi Obong */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
@@ -9,8 +60,243 @@
   --soft-white: #FAF9F6;
 }
 
+
+
 body {
   font-family: 'Playfair Display', serif;
   background-color: var(--soft-white);
+  color: var(--midnight-blue);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--midnight-blue);
+  color: var(--soft-white);
+}
+
+header h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+header p {
+  font-style: italic;
+  margin-bottom: 0;
+}
+header, main, footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background-color: var(--champagne-gold);
   color: var(--dark-charcoal);
+  font-weight: 900;
+  padding: 0.75rem  0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0.5rem 0;
+  padding: 0 60px;
+  font-size: large;
+}
+
+ h2 {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 540;
+  padding-bottom: 0.5rem;;
+}
+
+.welcome-section {
+  text-align: left;
+  padding-top: 2rem;
+}
+
+.welcome-section p {
+  line-height: 1.3rem;
+  font-weight: 545;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--champagne-gold);
+}
+
+.offerings-h2 {
+  padding-top: 1rem;
+}
+
+.offerings-section {
+  background-color: var(--olive-green);
+  color: var(--soft-white);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.offerings-container{
+  display: grid;
+  grid-template-columns: 1fr ;
+  gap: 1.5rem;
+  margin: 1rem 0 2rem 0 ;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--champagne-gold);
+  
+  text-align: center;
+}
+
+.offerings-section {
+  padding-top: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.offerings-section li{
+  list-style-type:disc;
+  text-align: start;
+  
+}
+
+.offerings-section ul {
+  text-indent: 1rem;
+  line-height: 1.5rem;
+}
+
+
+.offerings-section h3 {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 800;
+}
+
+.offerings-section p {
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: large;
+}
+
+.offerings-section:last-child {
+  grid-column: 1/-1; 
+}
+
+.gallery-header {
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery-box {
+  background-color: var(--soft-white);
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.gallery-box p {
+  padding: 0.5rem 1.5rem;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.contact-info {
+  background-color: var(--midnight-blue);
+  color: var(--soft-white);
+}
+
+
+@media screen and (min-width: 600px) {
+  nav li {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .offerings-container {
+    grid-template-columns: 1fr;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  body {
+    font-size: 1.05rem;
+  }
+}
+
+
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .offerings-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .welcome-section p {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  header img {
+    width: 200px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  main {
+    max-width: 1200px;
+  }
+
+  body {
+    font-size: 1.15rem;
+  }
 }

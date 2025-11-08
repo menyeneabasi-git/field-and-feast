@@ -220,6 +220,38 @@ nav li {
   color: var(--soft-white);
 }
 
+.gallery-view {
+  background-color: var(--olive-green);
+  color: var(--soft-white);
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 545;
+  margin: 0 0 2rem 0;
+}
+
+.view-box {
+  background-color: var(--soft-white);
+  margin: 0 0 2rem 0 ;
+  font-size: 1.25rem;
+  border-bottom: 2px solid var(--champagne-gold);
+}
+
+.contact-info {
+  padding: 4rem;
+  line-height: 1.5lh;
+}
+
+address {
+  color: var(--soft-white);
+}
+
+footer {
+  padding: 0;
+}
+
+.socials {
+  color: var(--champagne-gold);
+}
 
 @media screen and (min-width: 600px) {
   nav li {
